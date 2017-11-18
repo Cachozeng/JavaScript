@@ -1,0 +1,50 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+  
+<html>  
+<head>  
+</head>  
+
+ <!--页面加载，一运行这个页面就显示已经加载-->
+<body onLoad="alert('该页面已经加载成功！');">  
+  
+<form>  
+<!--弹出alert框-->
+    <input type="button" value="点击我" onclick="alert('第一次弹窗');alert('第二次弹窗');"/>  
+	
+	Username: <input type="text" name="username" />  
+    Password: <input type="password" name="password"/>  
+    <input type ="submit" value="提交" />    
+	
+</form>  
+
+<!--鼠标悬停，弹出alert框。-->
+ <a href= "htps://www.baidu.com" onMouseOver="alert('gameover!!');" > Mouch over here <br> </a> 
+
+ <!--鼠标离开标签<a>区域，弹出alert框。-->
+ <a href= "htps://www.baidu.com" onMouseOut="alert('gameover!!');" > Mouch leave here <br> </a>  
+ 
+<form name="anthonyForm">  
+    <input type="checkbox" name="thebox" />  
+    <input type="button" value="press me" onClick="validator()">  
+</form>  
+ 
+ <!--鼠标悬停，弹出alert框。-->
+ 
+ <!--鼠标悬停，弹出alert框。-->
+
+ <script type="text/javascript">   
+    var x = document.forms[0].length; 	
+    document.write("第一个form表单有"+x+"个控件"+ "<br />");  
+	var y = document.forms[0].elements[1].name;  
+    document.write(y);  
+	
+	//点击了form里面某一个元素，然后判断一下，是否点击
+	function validator(){  
+        if(document.anthonyForm.thebox.checked)  
+            alert("had checked");  
+    }  
+	
+</script>    
+</body>  
+</html>  

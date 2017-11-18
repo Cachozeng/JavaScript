@@ -1,0 +1,86 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+  
+<html>  
+<head>  
+</head>  
+<body>  
+<script type ="text/javascript">  
+        var apples = 35;  
+        var hotdogs = 35; 
+		
+	//if..else
+        if (apples < hotdogs){  
+            document.write("yea it worked!"+ "<br />");  
+         }else{  
+            document.write(" I like apples"+ "<br />");  
+        } 
+	
+		var firstName = "Anthony";  
+        var lastName = "Liu";  
+        if (firstName == "Anthony1"){  
+            if(lastName == "Liu"){  
+                document.write("Welcome "+firstName+" "+lastName+ "<br />");  
+            }else{  
+                document.write("Welcome somebody!"+ "<br />");  
+            }  
+        }  	
+		
+		// 逻辑与  
+        if ((firstName == "Anthony") && (lastName == "Liu")){  
+            document.write("Yeah, That is my name." + "<br />");  
+        }  
+        // 逻辑或  
+        if ((firstName == "Anthony") || (lastName == "Wang") ){  
+            document.write("只要有一个符合就打印"+ "<br />");  
+        } 
+	
+	//Switch 判断
+		var score = "A";  
+        switch(score){  
+            case "A+":  
+                document.write("很优秀"+ "<br />");  
+                break;  
+            case "A":  
+                document.write("优秀"+ "<br />");  
+                break;  
+            case "B":  
+                document.write("良好"+ "<br />");  
+                break;  
+            case "C":  
+                document.write("及格"+ "<br />");  
+                break;  
+            default:  
+                document.write("一般"+ "<br />");  
+        }  
+		
+	//for 循环	
+		for (i=0;i<10;i++){  
+			document.write("I am learing JavaScript！" +"<br />");  
+		}  
+		// 设置步长  
+		for (j=0;j<10;j+=3){  
+			document.write("for 循环经常要计算好步长，这里步长是3" +"<br />");  
+		} 
+		
+	//while 循环
+		var sum = 0;  
+		var i = 1;  
+		while(i<101){  
+			sum = sum + i;  
+			i++;  
+		}  
+		document.write(sum+"<br />");  
+		
+	//do..while 循环	
+		var sum1 = 0;  
+		var j = 1;  
+		do{  
+			sum1 = sum1 + j;  
+			j++;  
+		}while(j<101);  
+		document.write(sum1+"<br />");	
+		
+</script>  
+</body>  
+</html>  

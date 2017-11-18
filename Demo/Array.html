@@ -1,0 +1,68 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"    
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">    
+<html>    
+<head>    
+</head>    
+<body>    
+  
+<script type ="text/javascript">    
+	//第一种数组定义
+    var people = new Array("张三","李四","王二","Lucy","Tom");  
+    document.write(people[0]+ "<br />");  
+    document.write("数组越界时显示："+people[5]+ "<br />");  
+	
+	//第二种数组定义
+	var people1 = new Array(5); 
+	//var people1 = new Array();  	  //如果无法确定数组大小，就这样写，不写数组长度。
+    people1[0] = "张三";  
+    people1[1] = "李四";  
+    people1[2] = "王二";  
+    people1[3] = "Lucy";  
+    people1[4] = "Tom";  
+    document.write(people1[3]+ "<br />");  
+	
+	//数组的length属性和数组几个常用方法。
+	var ar1 = new Array("张三","李四","王二");  
+    var ar2 = new Array("Lucy","Lily","Tom");  
+      
+    // 数组常用属性length  
+    document.write(ar1.length+ "<br />");  
+      
+    // 数组方法concat() 两个数组拼接  
+    var name1 = ar1.concat(ar2); // 把ar2拼接到ar1的末尾  ("张三","李四","王二","Lucy","Lily","Tom")
+    var name2 = ar2.concat(ar1);  //("Lucy","Lily","Tom","张三","李四","王二")
+    document.write(name1[5]+"<br />");  
+    document.write(name2[5]+"<br />");   
+      
+    // 数组方法join(),返回原始的字符串，需要制定符号参数  
+    var stringA = ar2.join("、");  
+    document.write(stringA+"<br />");  
+	
+	//利用循环语句给数组添加元素
+	var names = new Array(3);  
+	for(i=0;i<3;i++){
+	//prompt()方法键盘输入内容
+		names[i] = prompt("Enter some name here:", "");  
+	}  
+	document.write("All the element in Array are:  "+names[0] + names[1]+ names[2]+"<br/>");  
+	
+	//关联数组（Associative Array）
+	var anthony = new Array();  
+	anthony["color"] = "blue";  
+	anthony["food"] = "duck";   
+	document.write("anthony favoutire color is " +anthony["color"] +"<br/>");  
+	document.write("anthony favoutire food is " +anthony["food"]+"<br/>");  
+	
+	//利用循环遍历打印数组元素
+	var stuff = new Array("zoom","apple","hums","pears","tom","lucy");  
+	//sort()对数组排序
+	stuff.sort();  
+	for(i=0;i<stuff.length;i++){       
+		document.write(stuff[i]+ "<br/>");  
+	}  
+
+</script>    
+  
+</body>    
+</html>   
+

@@ -1,0 +1,72 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"    
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">    
+<html>    
+<head>    
+</head>    
+<body>    
+<script type ="text/javascript">   
+ 
+// 变量的定义和使用  
+    var name = "Anthony"; //字符类型变量  
+    var age = 23; //整形变量  
+    var price = 18.99;  
+    var status = false;   // 布尔型(false true)       
+    var s = null; // 这是什么鬼  
+    var message = "He said \" I like becon. \" ";   // 字符串中如何打印出双引号？ 需要转义  
+    document.write(message+ "<br />");  
+/*  
+    变量使用var关键字去声明，可以先声明，不赋值，  
+        也可以申明的时候就赋值，单行可以写多个变量声明   
+*/  
+    var x = 2, y = 3, z = 4;  
+    document.write(x + y + z+"<br />");  
+    document.write(name + " is my name."+ "<br />");  
+    //document.write(Name); // 变量区分大小写，这里不会执行这行代码  
+	//如果某一行代码无法运行，下面代码会终止
+	
+     // 定义一个全局变量  
+     var name1 = " Anthony1 ";  
+     function fun1(){  
+	    var name2 = " Anthony2"; // 定义一个局部变量  
+         document.write(name1 + "<br />");  
+		 document.write(name2 + "<br />");  
+     }  
+    fun1(); // 函数内部可以调用全局变量  
+    document.write(name1+ "<br />");   //外部也可以调用全局变量
+	//document.write(name2+ "<br />");   // 这里调用局部变量失败，不会打印 Anthony  
+	
+	 // 练习下数学运算  
+        var a = 56 + 67 + 675; // 加法  
+        document.write(a + " <br /> ");  
+          
+        var b = 234 - 89; // 减法  
+        document.write(b + " <br /> ");  
+          
+        var c = 7 * 8; // 乘法  
+        document.write(c + " <br /> ");  
+          
+        var d = 89/8; // 除法  
+        document.write(d + " <br /> ");  
+          
+        var e = 89%3; // 取模  
+        document.write(e + " <br /> ");  
+          
+        var f = 67;   
+        f++; // 自增，相当于，f = f + 1;  
+        document.write(f + " <br /> ");  
+          
+        var g = 88;   
+        g--; // 自增，相当于，g = g - 1;  
+        document.write(g + " <br /> ");  
+		
+		// 赋值操作练习  
+        var x = 67;  
+        x += 45;  
+        x -= 23;  
+        x *= 6;  
+        x /= 8;  
+        document.write(x);  
+	
+</script>    
+</body>    
+</html>    

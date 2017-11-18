@@ -1,0 +1,54 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+  
+<html>  
+<head>  
+</head>  
+<body>  
+<script type ="text/javascript">  
+// 本文本介绍函数的定义和调用  
+function fun1(){  
+    alert("this is an alert dialog.");  
+}  
+//第一种调用函数的方法
+//fun1();  
+
+function fun2(x){
+	alert("I Love "+x)
+}
+//fun2("Beijing");
+//fun2("Just a test message");
+
+function fun3(x,y){
+	   document.write( x + " is better than " + y + "<br />");  
+}  
+fun3("张三", "李四");  
+fun3("培根", "鸡肉");  
+
+ function addNumbers(a, b){  
+        var c = a + b;  
+        return c;  
+}  
+document.write("带参数函数没有赋值时打印："+addNumbers() +"<br />");  
+document.write(addNumbers(2,3)+"<br />");  
+
+function doFirst(){  
+        document.write("第一个函数"+"<br />");  
+}  
+function doSecond(){  
+        document.write("第二个函数"+"<br />");  
+}  
+function start(){  
+        doFirst();  
+        doSecond();  
+}  
+//函数中如何调用其他函数的基本写法和用法
+start();
+	
+</script>  
+<form>  
+<!--第二种调用函数方式-->
+<input type="button" value="点击我一下" onclick="fun1()">  
+</form>  
+</body>  
+</html>   

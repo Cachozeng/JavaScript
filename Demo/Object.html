@@ -1,0 +1,80 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+  
+<html>  
+<head> 
+ <!--在head中间创建对象。-->
+<script type ="text/javascript">    
+    // 定义一个对象 ：函数 新建一个我们自己的对象
+    function person(name, age){  
+        this.name = name;  
+        this.age = age;  
+		//通过一个对象属性的值指向了另外一个函数，这样这个对象就有了方法可以调用
+		this.leftYears = leftYear;   
+    }  
+	
+	//给对象添加一个方法,假如我们能活100岁，这里计算还有多少年可活
+	function leftYear(){    
+        var numyears = 100 - this.age;  
+        return numyears;  
+    }  
+      	
+	// 定义一个对象：集合 对象的初始化 
+    anthony1 = {name:"Anthony Liu", age:24};  
+    sunny = {name:"Sunny", age:18};  
+	
+</script>     
+ 
+</head>  
+<body> 
+
+<div class="show_time">  
+  <div id="showTime">显示时间的位置</div>  
+</div>  
+ 
+<script type ="text/javascript">  
+
+    var stringA = "This is a test message";  
+    document.write("字符串长度为："+stringA.length +"<br>");  
+	
+	var anthony = new person("Anthony Liu", 18);  
+    document.write(anthony.name + " "+"<br>");  
+    document.write(anthony.age+"<br>");  
+	
+	document.write(anthony1.name + " love " + sunny.name + " because she is " + sunny.age+"<br>");  
+	
+	document.write(anthony.name + " have " + anthony.leftYears()+" years"+ "<br/>");  
+	
+	//Math对象中的PI和求平方根。
+	var n = prompt("Enter a number here:", "");  
+	var answer = Math.sqrt(n);  
+	alert( n + "的平方根是 "+answer );   
+	var x = Math.PI;  
+	document.write("圆周率为："+x+ "<br/>"); 
+
+	//Date()主要是获取日期和时间的一个接口
+	function printTime(){  
+		var now = new Date();  
+		var hours = now.getHours();  
+		var mins = now.getMinutes();  
+		var seconds = now.getSeconds();  
+		document.write(hours+":"+mins+":"+seconds+"<br/>");        
+	}  
+	//setInterval("printTime()",1000);  
+	
+	function printTime1(){  
+		var now = new Date();  
+		var year = now.getFullYear();  
+		var month = now.getMonth()+1; // JS获取的月份是从0开始  
+		var day = now.getDate();  
+		var hours = now.getHours();  
+		var mins = now.getMinutes();  
+		var seconds = now.getSeconds();  
+		document.getElementById("showTime").innerHTML=""+year+"年"+month+"月"+day+"日 "+"  "+hours+":"+mins+":"+seconds;  
+     }  
+	setInterval("printTime1()",1000);  
+	 
+</script>  
+
+</body>  
+</html>  
